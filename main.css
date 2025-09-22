@@ -1,7 +1,90 @@
-body,
-html {
-  /* height:100%; */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  margin: 0px;
-  padding: 0px;
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout using Grid: header, main, footer */
+#app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header: Flexbox for spacing */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main: Grid for store items */
+main {
+  padding: 2rem;
+}
+
+.store-items-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Store item card */
+.store-item {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.store-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.store-item p {
+  margin: 0.5rem 0;
+}
+
+/* Flexbox inside each item for rating/price etc */
+.details {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }
